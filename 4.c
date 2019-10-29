@@ -88,7 +88,7 @@ void deletenode(int position)
                 while(i<=position-2)
                 {
                         temporary = temporary->link;
-                        i++;
+                        i += 1;
                 }
 
 		/*now we assign the pointer p to next node 
@@ -121,11 +121,13 @@ int main()
     scanf("%d",&num);
 
     /*appending the new node*/
-    for(int i=0;i<num;i++)
+    int j = 0;
+    while(j < num)
     {
-        linking();
+	    linking();
+	    j += 1;
     }
-     struct node* temp = g_root;
+    struct node* temp = g_root;
     /*printing  the nodes of the linked list*/
     printing();
 
@@ -137,7 +139,7 @@ int main()
     	if (temp->data%2==0)
        	{
 		temp=temp->link;
-		i++;
+		i += 1;
         }
 
 	/*if not we have to delete the node and proceed further*/
